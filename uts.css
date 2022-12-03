@@ -5,11 +5,17 @@
   font-family: sans-serif;
 }
 
+/* menyembunyikan scroll */
+*::-webkit-scrollbar {
+    display: none;
+  }
+
 body {
   background-color: rgb(215, 215, 215);
 }
 
 .nav {
+  width: 100%;
   position: fixed;
   top: 0;
 }
@@ -29,7 +35,7 @@ a {
   padding: 20px;
   /* margin: 20px;  */
   text-align: center;
-  color: #000;
+  color: #fff;
   font-size: 16px;
   cursor: pointer;
   font-weight: 700;
@@ -37,5 +43,46 @@ a {
 
 li:hover,
 a:hover {
-  color: #fff;
+  color: rgb(255, 218, 173);
+}
+
+.left {
+  float: right;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  scroll-snap-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page {
+    background-color: #949494;
+    color: black;
+
+}
+
+.profile {
+    background-color: #333333;
+    color: #fff;
+}
+
+.education {
+    background-color: #949494;
+    color: #000;
+}
+
+.contact-me {
+    background-color: #333;
+    color: #fff;
 }
